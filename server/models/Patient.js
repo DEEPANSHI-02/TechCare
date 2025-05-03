@@ -61,7 +61,7 @@ const patientSchema = new mongoose.Schema({
 
 // Hash password before saving
 patientSchema.pre('save', async function (next) {
-    if (!this.isModified('pasword')) {
+    if (!this.isModified('password')) {
         return next();
     }
 
